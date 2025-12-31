@@ -8,11 +8,15 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
     <style>
         body {
             background-color: #f8f9fa;
             color: #212529;
             line-height: 1.6;
+            padding-top: 70px; /* for fixed navbar */
         }
 
         /* HERO */
@@ -23,11 +27,13 @@
             background: linear-gradient(135deg, #ffffff, #eef2f7);
         }
 
-        .hero h1 {
-            font-weight: 700;
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
-        /* SECTION */
         section {
             padding: 70px 0;
         }
@@ -37,7 +43,6 @@
             margin-bottom: 40px;
         }
 
-        /* SKILLS */
         .skill-badge {
             background-color: #e9ecef;
             padding: 10px 16px;
@@ -47,7 +52,6 @@
             display: inline-block;
         }
 
-        /* PROJECTS */
         .project-card {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -57,7 +61,15 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
-        /* FOOTER */
+        #contact a {
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #0d6efd;
+}
+
+
         footer {
             font-size: 14px;
         }
@@ -65,18 +77,44 @@
 </head>
 <body>
 
+<!-- HEADER -->
+<header>
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Saral Singh</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
 <!-- HERO -->
 <section class="hero">
     <div class="container text-center">
-        <h1>Saral Singh</h1>
+        <img src="assets/images/subject.jpeg"
+             class="img-fluid profile-img mb-3"
+             alt="Saral Singh">
+
+        <h1 class="fw-bold">Saral Singh</h1>
         <p class="text-muted fs-5">
             Backend Development Learner (PHP / Laravel)
         </p>
 
         <p class="mt-3 col-md-8 mx-auto">
             I am a BCA student and backend learner focused on PHP and Laravel.
-            I am currently building practical projects to understand CRUD operations,
-            database design, authentication, and REST API fundamentals.
+            Currently building practical projects to understand CRUD operations,
+            authentication, and REST API fundamentals.
         </p>
 
         <div class="mt-4">
@@ -89,28 +127,19 @@
 </section>
 
 <!-- ABOUT -->
-<section class="bg-white">
+<section id="about" class="bg-white">
     <div class="container">
         <h2 class="section-title text-center">About Me</h2>
 
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <p>
-                    I am currently pursuing a Bachelor of Computer Applications (BCA)
-                    and actively learning backend development using PHP and Laravel.
-                    My learning approach is project-driven — I focus on building
-                    real applications instead of only following tutorials.
+                    I am pursuing a Bachelor of Computer Applications (BCA) and learning
+                    backend development using PHP and Laravel through hands-on projects.
                 </p>
-
                 <p>
-                    I am interested in understanding how backend systems work,
-                    including database interactions, authentication flows,
-                    API design, and deployment basics.
-                </p>
-
-                <p>
-                    My goal is to become a strong backend developer with a solid
-                    foundation in core concepts rather than chasing frameworks blindly.
+                    My focus is on understanding backend fundamentals like databases,
+                    authentication flows, API design, and deployment basics.
                 </p>
             </div>
         </div>
@@ -118,7 +147,7 @@
 </section>
 
 <!-- SKILLS -->
-<section>
+<section id="skills">
     <div class="container text-center">
         <h2 class="section-title">Skills</h2>
 
@@ -235,41 +264,70 @@
     </div>
 </section>
 
-<!-- EDUCATION -->
-<section>
+<!-- CONTACT -->
+<section id="contact" class="bg-white">
     <div class="container">
-        <h2 class="section-title text-center">Education</h2>
+        <h2 class="section-title text-center">Contact</h2>
 
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <ul>
-                    <li>
-                        <strong>Bachelor of Computer Applications (BCA)</strong><br>
-                        Allenhouse Business School (2023 – 2026)
-                    </li>
-                    <li class="mt-3">
-                        <strong>Intermediate</strong><br>
-                        Patel Saraswati Vidyalaya Inter College, Kanpur (2021 – 2022)
-                    </li>
-                </ul>
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body text-center">
+
+                        <p class="mb-3">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            <a href="mailto:saralsingh2005@gmail.com">
+                                saralsingh2005@gmail.com
+                            </a>
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-4 fs-5">
+                            <a href="https://github.com/SaralSingh"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-dark">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/saral-singh-8a850a298/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-dark">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/saral._.singh/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-dark">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                           
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+
+
 <!-- FOOTER -->
 <footer class="py-4 bg-dark text-white text-center">
     <p class="mb-1">© 2025 Saral Singh</p>
     <p class="mb-0">
-        <a href="https://github.com/SaralSingh" target="_blank" class="text-white text-decoration-none">
-            GitHub
-        </a> |
-        <a href="https://www.linkedin.com/in/saral-singh-8a850a298/" target="_blank"
-           class="text-white text-decoration-none">
-            LinkedIn
-        </a>
+        <a href="https://github.com/SaralSingh" target="_blank" rel="noopener noreferrer"
+           class="text-white text-decoration-none">GitHub</a> |
+        <a href="https://www.linkedin.com/in/saral-singh-8a850a298/"
+           target="_blank" rel="noopener noreferrer"
+           class="text-white text-decoration-none">LinkedIn</a>
     </p>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
