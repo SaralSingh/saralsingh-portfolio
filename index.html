@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saral Singh | Backend Developer</title>
+    <title>Saral Singh | Backend Learner</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,90 +11,239 @@
     <style>
         body {
             background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
         }
+
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
+            background: linear-gradient(135deg, #ffffff, #eef2f7);
+        }
+
+        .hero h1 {
+            font-weight: 700;
+        }
+
+        /* SECTION */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        /* SKILLS */
+        .skill-badge {
+            background-color: #e9ecef;
+            padding: 10px 16px;
+            border-radius: 20px;
+            margin: 6px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        /* PROJECTS */
+        .project-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        /* FOOTER */
+        footer {
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container text-center">
-            <h1 class="fw-bold">Saral Singh</h1>
-            <p class="text-muted fs-5">Backend Developer (PHP / Laravel)</p>
-            <p class="mt-3">
-                I am a backend-focused developer learning PHP and Laravel. 
-                I enjoy building APIs, working with databases, and deploying projects.
-            </p>
-
-            <div class="mt-4">
-                <a href="#projects" class="btn btn-dark me-2">View Projects</a>
-                <a href="mailto:saralsingh2005@gmail.com" class="btn btn-outline-dark">Contact</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center mb-4">Skills</h2>
-            <div class="row text-center">
-                <div class="col-md-3">PHP</div>
-                <div class="col-md-3">Laravel</div>
-                <div class="col-md-3">MySQL</div>
-                <div class="col-md-3">REST APIs</div>
-                <div class="col-md-3 mt-3">Git & GitHub</div>
-                <div class="col-md-3 mt-3">Basic Linux</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects</h2>
-
-            <div class="row justify-content-center">
-                <div class="col-md-6 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Laravel CRUD Application</h5>
-                            <p class="card-text">
-                                A basic CRUD application built using Laravel and MySQL with authentication.
-                            </p>
-                            <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">REST API Project</h5>
-                            <p class="card-text">
-                                A RESTful API built with Laravel focusing on clean routes and controllers.
-                            </p>
-                            <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-4 bg-dark text-white text-center">
-        <p class="mb-1">© 2025 Saral Singh</p>
-        <p class="mb-0">
-            <a href="https://github.com/SaralSingh" class="text-white text-decoration-none">GitHub</a>
+<!-- HERO -->
+<section class="hero">
+    <div class="container text-center">
+        <h1>Saral Singh</h1>
+        <p class="text-muted fs-5">
+            Backend Development Learner (PHP / Laravel)
         </p>
-    </footer>
+
+        <p class="mt-3 col-md-8 mx-auto">
+            I am a BCA student and backend learner focused on PHP and Laravel.
+            I am currently building practical projects to understand CRUD operations,
+            database design, authentication, and REST API fundamentals.
+        </p>
+
+        <div class="mt-4">
+            <a href="#projects" class="btn btn-dark me-2">View Projects</a>
+            <a href="mailto:saralsingh2005@gmail.com" class="btn btn-outline-dark">
+                Contact
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="bg-white">
+    <div class="container">
+        <h2 class="section-title text-center">About Me</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <p>
+                    I am currently pursuing a Bachelor of Computer Applications (BCA)
+                    and actively learning backend development using PHP and Laravel.
+                    My learning approach is project-driven — I focus on building
+                    real applications instead of only following tutorials.
+                </p>
+
+                <p>
+                    I am interested in understanding how backend systems work,
+                    including database interactions, authentication flows,
+                    API design, and deployment basics.
+                </p>
+
+                <p>
+                    My goal is to become a strong backend developer with a solid
+                    foundation in core concepts rather than chasing frameworks blindly.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <div class="container text-center">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="d-flex flex-wrap justify-content-center">
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">Laravel</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">REST APIs (Basics)</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">Git & GitHub</span>
+            <span class="skill-badge">C / C++</span>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="bg-white">
+    <div class="container">
+        <h2 class="section-title text-center">Projects</h2>
+
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Blogify v1.0 (Laravel Blog Application)</h5>
+                        <p class="card-text">
+                            A Laravel-based blog application developed as a learning project.
+                            It includes authentication, role-based access, and a user dashboard.
+                        </p>
+                        <ul>
+                            <li>User registration and login</li>
+                            <li>Post CRUD functionality</li>
+                            <li>REST API for public posts</li>
+                            <li>Blade templates with Bootstrap</li>
+                        </ul>
+
+                        <a href="http://appsaral.alwaysdata.net" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                        <a href="https://github.com/SaralSingh/blogify.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Attendance Hub</h5>
+                        <p class="card-text">
+                            A web application created for BCA students to track attendance
+                            and access academic resources.
+                        </p>
+                        <ul>
+                            <li>Attendance tracking system</li>
+                            <li>Assignment and paper solution sections</li>
+                            <li>Simple and student-friendly UI</li>
+                        </ul>
+
+                        <a href="https://attendhub.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                        <!-- <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-6 mb-4">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Talksy (Group Chat Website)</h5>
+                        <p class="card-text">
+                            A group chat website developed to understand authentication
+                            and basic real-time communication concepts.
+                        </p>
+                        <ul>
+                            <li>User authentication and admin controls</li>
+                            <li>Group chat functionality</li>
+                            <li>GIF search and user status</li>
+                        </ul>
+
+                        <a href="https://talksy.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                        <!-- <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+    <div class="container">
+        <h2 class="section-title text-center">Education</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <ul>
+                    <li>
+                        <strong>Bachelor of Computer Applications (BCA)</strong><br>
+                        Allenhouse Business School (2023 – 2026)
+                    </li>
+                    <li class="mt-3">
+                        <strong>Intermediate</strong><br>
+                        Patel Saraswati Vidyalaya Inter College, Kanpur (2021 – 2022)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 bg-dark text-white text-center">
+    <p class="mb-1">© 2025 Saral Singh</p>
+    <p class="mb-0">
+        <a href="https://github.com/SaralSingh" target="_blank" class="text-white text-decoration-none">
+            GitHub
+        </a> |
+        <a href="https://www.linkedin.com/in/saral-singh-8a850a298/" target="_blank"
+           class="text-white text-decoration-none">
+            LinkedIn
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>
