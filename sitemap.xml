@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main portfolio -->
   <url>
     <loc>https://saralsingh.space/</loc>
+    <priority>1.0</priority>
   </url>
+
+  <!-- Shrtx frontend demo -->
+  <url>
+    <loc>https://blog.saralsingh.space/shrtx-frontend/</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
