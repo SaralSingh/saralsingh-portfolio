@@ -199,45 +199,52 @@
             color: var(--dim-color);
         }
 
-        /* --- NEW IMAGE SECTION STYLES --- */
-        .profile-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            margin-bottom: 30px;
-        }
+/* --- IMAGE SECTION FIXED --- */
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 30px;
+}
 
-        .profile-frame {
-            border: 2px solid var(--dim-color);
-            padding: 5px;
-            width: 180px;
-            height: 180px;
-            flex-shrink: 0;
-            position: relative;
-        }
+.profile-frame {
+    border: 2px solid var(--dim-color);
+    padding: 5px;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    position: relative;
 
-        /* "Scanning" corner effect */
-        .profile-frame::after {
-            content: "ID: USER_01";
-            position: absolute;
-            bottom: -25px;
-            left: 0;
-            font-size: 12px;
-            color: var(--dim-color);
-        }
+    /* important */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+}
 
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Make it black & white to fit theme, color on hover */
-            filter: grayscale(100%) contrast(1.2);
-            transition: filter 0.3s ease;
-        }
+/* "Scanning" corner effect */
+.profile-frame::after {
+    content: "ID: USER_01";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    font-size: 12px;
+    color: var(--dim-color);
+}
 
-        .profile-img:hover {
-            filter: grayscale(0%) contrast(1);
-        }
+.profile-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;   /* FIX: no cropping */
+    
+    filter: grayscale(100%) contrast(1.2);
+    transition: filter 0.3s ease;
+}
+
+.profile-img:hover {
+    filter: grayscale(0%) contrast(1);
+}
+
 
         /* Project Table */
         .file-list {
