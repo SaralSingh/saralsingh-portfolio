@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Basic Meta -->
     <meta charset="UTF-8">
@@ -9,10 +10,12 @@
     <title>Saral Singh – Backend Developer (PHP & Laravel)</title>
 
     <!-- SEO Description -->
-    <meta name="description" content="Backend Developer specializing in PHP & Laravel. Based in Kanpur, India. Explore my real projects, clean backend code, APIs, and problem-solving approach.">
+    <meta name="description"
+        content="Backend Developer specializing in PHP & Laravel. Based in Kanpur, India. Explore my real projects, clean backend code, APIs, and problem-solving approach.">
 
     <!-- SEO Keywords (Not too long) -->
-    <meta name="keywords" content="Backend Developer, PHP Developer, Laravel Developer, Kanpur Developer, Saral Singh Portfolio">
+    <meta name="keywords"
+        content="Backend Developer, PHP Developer, Laravel Developer, Kanpur Developer, Saral Singh Portfolio">
 
     <!-- Author -->
     <meta name="author" content="Saral Singh">
@@ -21,13 +24,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://saralsingh.space/">
     <meta property="og:title" content="Saral Singh – Backend Developer (PHP & Laravel)">
-    <meta property="og:description" content="Backend Developer from Kanpur specializing in PHP & Laravel. Check my projects, APIs, and clean backend architecture.">
+    <meta property="og:description"
+        content="Backend Developer from Kanpur specializing in PHP & Laravel. Check my projects, APIs, and clean backend architecture.">
     <meta property="og:image" content="https://saralsingh.space/assets/images/preview.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Saral Singh – Backend Developer (PHP & Laravel)">
-    <meta name="twitter:description" content="Backend Developer from Kanpur specializing in PHP & Laravel. Check my projects and backend engineering work.">
+    <meta name="twitter:description"
+        content="Backend Developer from Kanpur specializing in PHP & Laravel. Check my projects and backend engineering work.">
     <meta name="twitter:image" content="https://saralsingh.space/assets/images/preview.png">
 
     <!-- Schema.org JSON-LD (Google Knowledge Graph) -->
@@ -58,421 +63,534 @@
     <link rel="me" href="https://github.com/SaralSingh">
     <link rel="me" href="https://www.linkedin.com/in/saral-singh-8a850a298/">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        :root {
+            --bg-color: #0c0c0c;
+            --text-color: #33ff00;
+            /* Neon Green */
+            --dim-color: #008f11;
+            /* Darker Green for comments/meta */
+            --highlight: #1a1a1a;
+            --cursor-color: #33ff00;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #f8f9fa;
-            color: #212529;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
             line-height: 1.6;
-            padding-top: 70px; /* for fixed navbar */
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
         }
 
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #ffffff, #eef2f7);
+        .terminal {
+            max-width: 950px;
+            margin: 0 auto;
+            padding-bottom: 50px;
         }
 
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
+        /* Links */
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--dim-color);
+            transition: all 0.2s;
         }
 
-        section {
-            padding: 70px 0;
+        a:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            border-bottom: none;
+            cursor: pointer;
         }
 
-        .section-title {
-            font-weight: 600;
+        h1,
+        h2,
+        h3 {
+            font-weight: normal;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Terminal Prompts */
+        .prompt {
+            color: var(--text-color);
+            margin-right: 10px;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        .prompt::before {
+            content: "saral@server:~$ ";
+        }
+
+        .root-prompt::before {
+            content: "root@kernel:~# ";
+            color: #ef4444;
+            /* Red for root/important sections */
+        }
+
+        /* Text Styles */
+        .comment {
+            color: var(--dim-color);
+            font-style: italic;
+        }
+
+        .output {
+            color: #e5e5e5;
+            /* Off-white for readability */
+            margin-left: 20px;
+            margin-bottom: 40px;
+            display: block;
+            white-space: pre-wrap;
+        }
+
+        .keyword {
+            color: #60a5fa;
+            /* Blue for keywords */
+            font-weight: bold;
+        }
+
+        .string {
+            color: #fca5a5;
+            /* Light Red for emphasis words */
+        }
+
+        /* Blinking Cursor */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: var(--cursor-color);
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            border-bottom: 1px solid var(--dim-color);
+            padding-bottom: 15px;
             margin-bottom: 40px;
         }
 
-        .skill-badge {
-            background-color: #e9ecef;
-            padding: 10px 16px;
-            border-radius: 20px;
-            margin: 6px;
-            font-size: 14px;
-            display: inline-block;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
         }
 
-        .project-card {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        nav li::before {
+            content: "./";
+            color: var(--dim-color);
         }
 
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        /* --- NEW IMAGE SECTION STYLES --- */
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 30px;
         }
 
-        #contact a {
-    text-decoration: none;
-}
+        .profile-frame {
+            border: 2px solid var(--dim-color);
+            padding: 5px;
+            width: 180px;
+            height: 180px;
+            flex-shrink: 0;
+            position: relative;
+        }
 
-#contact a:hover {
-    color: #0d6efd;
-}
+        /* "Scanning" corner effect */
+        .profile-frame::after {
+            content: "ID: USER_01";
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            font-size: 12px;
+            color: var(--dim-color);
+        }
 
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Make it black & white to fit theme, color on hover */
+            filter: grayscale(100%) contrast(1.2);
+            transition: filter 0.3s ease;
+        }
 
-        footer {
-            font-size: 14px;
+        .profile-img:hover {
+            filter: grayscale(0%) contrast(1);
+        }
+
+        /* Project Table */
+        .file-list {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .file-row {
+            display: table-row;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .file-row:last-child {
+            border-bottom: none;
+        }
+
+        .file-perms,
+        .file-user,
+        .file-size,
+        .file-date,
+        .file-name {
+            display: table-cell;
+            padding: 10px 15px 10px 0;
+            vertical-align: top;
+        }
+
+        .file-perms {
+            color: var(--dim-color);
+            font-family: monospace;
+        }
+
+        .file-name {
+            width: 60%;
+        }
+
+        .dir {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        /* Directory Blue */
+        .exe {
+            color: #33ff00;
+            font-weight: bold;
+        }
+
+        /* Executable Green */
+
+        /* Separator */
+        .section-separator {
+            color: var(--dim-color);
+            margin: 40px 0 20px 0;
+            user-select: none;
+            opacity: 0.5;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                /* Stack image on top of text */
+                align-items: center;
+                text-align: left;
+            }
+
+            .file-perms,
+            .file-user,
+            .file-date {
+                display: none;
+                /* Hide details on small screens */
+            }
+
+            .output {
+                margin-left: 0;
+            }
+
+            .terminal {
+                padding: 10px;
+            }
+
+            .prompt::before {
+                content: "$ ";
+            }
         }
     </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Saral Singh</a>
+    <div class="terminal">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNav">
-<ul class="navbar-nav ms-auto align-items-center">
-    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
-    <!-- SEO important link -->
-    <li class="nav-item">
-        <a class="nav-link fw-semibold text-primary" 
-           href="https://blog.saralsingh.space" 
-           target="_blank">
-           Blog
-        </a>
-    </li>
-</ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="container text-center">
-        <img src="assets/images/subject.jpeg"
-             class="img-fluid profile-img mb-3"
-             alt="Saral Singh Web Developer">
-
-        <h1 class="fw-bold">Saral Singh</h1>
-        <p class="text-muted fs-5">
-            Backend Development Learner (PHP / Laravel)
-        </p>
-
-        <p class="mt-3 col-md-8 mx-auto">
-            I am a BCA student and backend learner focused on PHP and Laravel.
-            Currently building practical projects to understand CRUD operations,
-            authentication, and REST API fundamentals.
-        </p>
-
-        <div class="mt-4">
-            <a href="#projects" class="btn btn-dark me-2">View Projects</a>
-            <a href="mailto:saralsingh2005@gmail.com" class="btn btn-outline-dark">
-                Contact
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="bg-white">
-    <div class="container">
-        <h2 class="section-title text-center">About Me</h2>
-
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <p>
-                    I am pursuing a Bachelor of Computer Applications (BCA) and learning
-                    backend development using PHP and Laravel through hands-on projects.
-                </p>
-                <p>
-                    My focus is on understanding backend fundamentals like databases,
-                    authentication flows, API design, and deployment basics.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <div class="container text-center">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="d-flex flex-wrap justify-content-center">
-            <span class="skill-badge">PHP</span>
-            <span class="skill-badge">Laravel</span>
-            <span class="skill-badge">MySQL</span>
-            <span class="skill-badge">REST APIs (Basics)</span>
-            <span class="skill-badge">HTML</span>
-            <span class="skill-badge">CSS (Basics)</span>
-            <span class="skill-badge">JavaScript (Basics)</span>
-            <span class="skill-badge">Bootstrap</span>
-            <span class="skill-badge">Git & GitHub</span>
-            <span class="skill-badge">C / C++</span>
-            <span class="skill-badge">Python (Basics)</span>
-        </div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="bg-white">
-    <div class="container">
-        <h2 class="section-title text-center">Projects</h2>
-
-        <div class="row">
-
-            <!-- Project: Shrtx – API-First URL Shortener -->
-<div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">Shrtx – API-First URL Shortener</h5>
-
-            <p class="card-text">
-                An API-first URL shortening service built with Laravel, focused on
-                clean backend architecture, performance, and controlled access.
-                Designed to handle high-frequency redirect traffic efficiently.
-            </p>
-
-            <ul>
-                <li>Deterministic Base62 short code generation (ID-based)</li>
-                <li>Fast public redirects with indexed lookups</li>
-                <li>Rate-limited API (anonymous & token-ready)</li>
-                <li>Service-layer architecture (clean controllers)</li>
-                <li>Click tracking & optional link expiration</li>
-            </ul>
-
-            <a href="https://blog.saralsingh.space/shrtx-frontend/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-            <a href="https://github.com/SaralSingh/shrtx.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-        </div>
-    </div>
-</div>
-
-
-            <!-- Project: PHP Mini MVC Framework -->
-<div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">PHP Mini MVC Framework</h5>
-
-            <p class="card-text">
-                A lightweight MVC framework built from scratch in PHP to understand
-                routing, middleware, and core framework internals.
-            </p>
-
-            <ul>
-                <li>Custom Router with GET/POST support</li>
-                <li>MVC architecture (Controllers & Views)</li>
-                <li>Middleware system (Auth / Guest)</li>
-                <li>Session handling & helper functions</li>
-            </ul>
-             <a href="https://minimvc.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-             <a href="https://github.com/SaralSingh/php-mini-mvc-framework.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-     
-        </div>
-    </div>
-</div>
-
-            <!-- Project 1 -->
-            <div class="col-md-6 mb-4">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Blogify v1.0 (Laravel Blog Application)</h5>
-                        <p class="card-text">
-                            A Laravel-based blog application developed as a learning project.
-                            It includes authentication, role-based access, and a user dashboard.
-                        </p>
-                        <ul>
-                            <li>User registration and login</li>
-                            <li>Post CRUD functionality</li>
-                            <li>REST API for public posts</li>
-                            <li>Blade templates with Bootstrap</li>
-                        </ul>
-
-                        <a href="http://appsaral.alwaysdata.net/blogify" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-                        <a href="https://github.com/SaralSingh/blogify.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="col-md-6 mb-4">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Attendance Hub</h5>
-                        <p class="card-text">
-                            A web application created for BCA students to track attendance
-                            and access academic resources.
-                        </p>
-                        <ul>
-                            <li>Attendance tracking system</li>
-                            <li>Assignment and paper solution sections</li>
-                            <li>Simple and student-friendly UI</li>
-                        </ul>
-
-                        <a href="https://attendhub.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-                        <!-- <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a> -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="col-md-6 mb-4">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Talksy (Group Chat Website)</h5>
-                        <p class="card-text">
-                            A group chat website developed to understand authentication
-                            and basic real-time communication concepts.
-                        </p>
-                        <ul>
-                            <li>User authentication and admin controls</li>
-                            <li>Group chat functionality</li>
-                            <li>GIF search and user status</li>
-                        </ul>
-
-                        <a href="https://talksy.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-                        <!-- <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Project : SkyHunt -->
-<div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">SkyHunt (Python Arcade Game)</h5>
-
-            <p class="card-text">
-                SkyHunt is a simple arcade-style game built using Python.
-                I created this project to practice game logic, event handling,
-                and basic performance optimization.
-            </p>
-
-            <ul>
-                <li>Keyboard-based character movement and shooting</li>
-                <li>Monster spawning and score system</li>
-                <li>Lifeline system with game-over condition</li>
-                <li>Power-ups that temporarily boost speed and damage</li>
-                <li>Converted the game into a Windows <code>.exe</code> file</li>
-                <li>Digitally signed the executable using <code>signtool.exe</code></li>
-            </ul>
-            <a href="https://github.com/SaralSingh/SkyHunt-Game.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-           
-        </div>
-    </div>
-</div>
-
-        </div>
-    </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-    <div class="container">
-        <h2 class="section-title text-center">Education</h2>
-
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+        <header>
+            <span class="comment"># ESTABLISHING SECURE CONNECTION...</span>
+            <span class="comment"># AUTHENTICATED USER: SARAL SINGH</span>
+            <span class="comment"># SYSTEM: BACKEND ARCHITECTURE & DESIGN</span>
+            <br>
+            <nav>
                 <ul>
-                    <li>
-                        <strong>Bachelor of Computer Applications (BCA)</strong><br>
-                        Allenhouse Business School (2023 – 2026)
-                    </li>
-                    <li class="mt-3">
-                        <strong>Intermediate</strong><br>
-                        Patel Saraswati Vidyalaya Inter College, Kanpur (2021 – 2022)
-                    </li>
+                    <li><a href="#about">whoami</a></li>
+                    <li><a href="#stack">./tech_stack.sh</a></li>
+                    <li><a href="#projects">cd projects/</a></li>
+                    <li><a href="#contact">ping me</a></li>
+                    <li><a href="https://blog.saralsingh.space" target="_blank">tail -f blog.log</a></li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</section>
+            </nav>
+        </header>
 
-<!-- CONTACT -->
-<section id="contact" class="bg-white">
-    <div class="container">
-        <h2 class="section-title text-center">Contact</h2>
+        <section id="about">
+            <div class="prompt">whoami</div>
 
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-
-                        <p class="mb-3">
-                            <i class="fa-solid fa-envelope me-2"></i>
-                            <a href="mailto:saralsingh2005@gmail.com">
-                                saralsingh2005@gmail.com
-                            </a>
-                        </p>
-
-                        <div class="d-flex justify-content-center gap-4 fs-5">
-<a href="https://github.com/SaralSingh" class="text-dark" target="_blank">
-   <i class="fa-brands fa-github"></i> 
-</a>
-
-
-                            <a href="https://www.linkedin.com/in/saral-singh-8a850a298/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-dark">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            
-                            <a href="https://www.instagram.com/saral._.singh/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-dark">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                           
-                        </div>
-
+            <div class="output">
+                <div class="profile-container">
+                    <div class="profile-frame">
+                        <img src="assets/images/subject.png" alt="Saral Singh" class="profile-img">
                     </div>
+
+                    <div class="bio-text">
+                        <span class="keyword">NAME:</span> Saral Singh
+                        <span class="keyword">ROLE:</span> Backend Developer (PHP & Laravel)
+                        <span class="keyword">LOCATION:</span> Kanpur, India
+
+                        <span class="keyword">SUMMARY:</span>
+                        I like understanding how web applications work internally — routing, sessions, databases, APIs,
+                        and deployment.
+                        Most of my learning comes from building small projects from scratch and breaking them until I
+                        understand the failure.
+
+                        <span class="keyword">CURRENT_STATUS:</span>
+                        BCA student focused on backend fundamentals.
+                        Currently practicing PHP and Laravel by building real projects that involve authentication,
+                        database design, API creation, and server deployment.
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section id="stack">
+            <div class="section-separator">----------------------------------------</div>
+            <div class="prompt">./tech_stack.sh --verbose</div>
+            <div class="output">
+                <span class="comment"># CORE</span>
+                [ OK ] PHP 8.x (Functions, Arrays, Sessions, OOP basics)
+                [ OK ] Laravel (Routing, Controllers, Middleware, Eloquent)
+                [ OK ] MySQL (Joins, Indexes, Schema design)
+
+                <span class="comment"># WHAT I PRACTICE THROUGH PROJECTS</span>
+                [ OK ] Authentication & Session handling
+                [ OK ] REST API creation and testing
+                [ OK ] MVC structure from scratch (Mini MVC project)
+                [ OK ] Database design for real use-cases
+
+                <span class="comment"># TOOLING</span>
+                [ OK ] Git & GitHub (version control)
+                [ OK ] Linux terminal basics (SSH, file structure, permissions)
+                [ OK ] Deploying projects on shared hosting / VPS
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <div class="section-separator">----------------------------------------</div>
+            <div class="prompt">cd ~/projects && ls -latr</div>
+            <div class="output">
+                <div class="file-list">
+                    <div class="file-row" style="color: var(--dim-color); border-bottom: 1px dashed var(--dim-color);">
+                        <span class="file-perms">PERMISSIONS</span>
+                        <span class="file-user">OWNER</span>
+                        <span class="file-date">LAST MOD</span>
+                        <span class="file-name">PROJECT NAME & DETAILS</span>
+                    </div>
+
+                    <!-- SHRTX -->
+                    <div class="file-row">
+                        <span class="file-perms">drwxr-xr-x</span>
+                        <span class="file-user">saral</span>
+                        <span class="file-date">Jan 10</span>
+                        <span class="file-name">
+                            <a href="https://blog.saralsingh.space/shrtx-frontend/" target="_blank"
+                                class="dir">shrtx_api_service/</a>
+                            <br>
+                            <span class="comment">
+                                [ live_demo ] <a href="https://blog.saralsingh.space/shrtx-frontend/"
+                                    target="_blank">open</a>
+                                [ source_code ] <a href="https://github.com/SaralSingh/shrtx.git"
+                                    target="_blank">github</a>
+                                <br>
+                                * Deterministic Base62 short code generation (ID-based)
+                                * Fast public redirects with indexed lookups
+                                * Rate-limited API (anonymous & token-ready)
+                                * Service-layer architecture (clean controllers)
+                                * Click tracking & optional link expiration
+
+                            </span>
+
+                        </span>
+                    </div>
+
+                    <!-- MINI MVC -->
+                    <div class="file-row">
+                        <span class="file-perms">-rwxr-xr-x</span>
+                        <span class="file-user">saral</span>
+                        <span class="file-date">Dec 20</span>
+                        <span class="file-name">
+                            <a href="https://minimvc.wuaze.com" target="_blank" class="exe">mini_mvc_framework.php</a>
+                            <br>
+                            <span class="comment">
+                                [ live_demo ] <a href="https://minimvc.wuaze.com" target="_blank">open</a>
+                                [ source_code ] <a href="https://github.com/SaralSingh/php-mini-mvc-framework.git"
+                                    target="_blank">github</a>
+                                <br>
+                                * Custom Router with GET/POST support
+                                * MVC structure with Controllers and Views
+                                * Middleware for Auth and Guest handling
+                                * Manual session handling and helper functions
+
+                            </span>
+                        </span>
+                    </div>
+
+                    <!-- BLOGIFY -->
+                    <div class="file-row">
+                        <span class="file-perms">drwxr-xr-x</span>
+                        <span class="file-user">saral</span>
+                        <span class="file-date">Nov 15</span>
+                        <span class="file-name">
+                            <a href="http://appsaral.alwaysdata.net/blogify" target="_blank"
+                                class="dir">blogify_platform/</a>
+                            <br>
+                            <span class="comment">
+                                [ live_demo ] <a href="http://appsaral.alwaysdata.net/blogify" target="_blank">open</a>
+                                [ source_code ] <a href="https://github.com/SaralSingh/blogify.git"
+                                    target="_blank">github</a>
+                                <br>
+                                * User registration and login
+                                * Post CRUD operations
+                                * Public REST API for fetching posts
+                            </span>
+
+                        </span>
+                    </div>
+
+                    <!-- ATTENDANCE HUB -->
+                    <div class="file-row">
+                        <span class="file-perms">drwxr-xr-x</span>
+                        <span class="file-user">saral</span>
+                        <span class="file-date">Oct 05</span>
+                        <span class="file-name">
+                            <a href="https://attendhub.wuaze.com" target="_blank" class="dir">attendance_hub/</a>
+                            <br>
+                            <span class="comment">
+                                [ live_demo ] <a href="https://attendhub.wuaze.com" target="_blank">open</a>
+                                <br>
+                                * Attendance tracking system
+                                * Assignment and paper solution sections
+                                * Simple and student-friendly interface
+
+                            </span>
+
+                        </span>
+                    </div>
+
+                    <!-- TALKSY -->
+                    <div class="file-row">
+                        <span class="file-perms">drwxr-xr-x</span>
+                        <span class="file-user">saral</span>
+                        <span class="file-date">Sep 12</span>
+                        <span class="file-name">
+                            <a href="https://talksy.wuaze.com" target="_blank" class="dir">talksy_chat_app/</a>
+                            <br>
+                            <span class="comment">
+                                [ live_demo ] <a href="https://talksy.wuaze.com" target="_blank">open</a>
+                                <br>
+                                * User authentication and admin controls
+                                * Group chat functionality
+                                * GIF search and user status
+
+                            </span>
+
+                        </span>
+                    </div>
+
+                    <!-- SKYHUNT -->
+                    <div class="file-row">
+                        <span class="file-perms">-rwxr-x---</span>
+                        <span class="file-user">saral</span>
+                        <span class="file-date">Aug 01</span>
+                        <span class="file-name">
+                            <a href="https://github.com/SaralSingh/SkyHunt-Game.git" target="_blank"
+                                class="exe">skyhunt_game.exe</a>
+                            <br>
+                            <span class="comment">
+                                <a href="https://github.com/SaralSingh/SkyHunt-Game.git" target="_blank">github</a>
+                                <br>
+                                * Keyboard-based character movement and shooting
+                                * Monster spawning and score system
+                                * Lifeline system with game-over condition
+                                * Power-ups that temporarily boost speed and damage
+                                * Converted the game into a Windows .exe file
+                                * Digitally signed the executable using signtool.exe
+
+                            </span>
+
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="education">
+            <div class="section-separator">----------------------------------------</div>
+            <div class="root-prompt">tail -n 5 /var/log/education.log</div>
+            <div class="output">
+                [2023-2026] <span class="keyword">Allenhouse Business School</span>
+                > Bachelor of Computer Applications (BCA)
+                > Focus: Backend Architecture & DB Management
+
+                [2021-2022] <span class="keyword">Patel Saraswati Vidyalaya</span>
+                > Intermediate (Completed)
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-separator">----------------------------------------</div>
+            <div class="prompt">./init_contact.sh</div>
+            <div class="output">
+                Initializing handshake...
+
+                [MAIL] <a href="mailto:saralsingh2005@gmail.com">saralsingh2005@gmail.com</a>
+                [CODE] <a href="https://github.com/SaralSingh" target="_blank">github.com/SaralSingh</a>
+                [LINK] <a href="https://www.linkedin.com/in/saral-singh-8a850a298/"
+                    target="_blank">linkedin.com/in/saral-singh</a>
+                [INST] <a href="https://www.instagram.com/saral._.singh/"
+                    target="_blank">instagram.com/saral._.singh</a>
+
+                Connection kept alive. <span class="cursor"></span>
+            </div>
+        </section>
+
+        <footer style="margin-top: 60px; border-top: 1px solid var(--dim-color); padding-top: 15px; font-size: 13px;">
+            <span class="comment"># © 2026 Saral Singh. Open Source Enthusiast.</span>
+            <span class="comment"># <a href="#" style="color: #ef4444;">sudo poweroff</a> to shutdown.</span>
+        </footer>
+
     </div>
-</section>
 
-
-
-<footer class="py-4 bg-dark text-white text-center">
-    <p class="mb-1">© 2026 Saral Singh</p>
-
-    <p class="mb-2">
-        <a href="https://github.com/SaralSingh"
-           class="text-white text-decoration-none mx-2"
-           target="_blank">
-           GitHub
-        </a>
-        |
-        <a href="https://www.linkedin.com/in/saral-singh-8a850a298/"
-           class="text-white text-decoration-none mx-2"
-           target="_blank">
-           LinkedIn
-        </a>
-    </p>
-
-    <p class="mb-0">
-        Learning backend development • Building projects step by step
-    </p>
-</footer>
-
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+        console.log("System Ready.");
+    </script>
 </body>
+
 </html>
