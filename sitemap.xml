@@ -13,4 +13,10 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Shabd live project -->
+  <url>
+    <loc>https://appsaral.alwaysdata.net/</loc>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
