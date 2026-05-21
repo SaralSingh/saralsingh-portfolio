@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Title (Google Uses This) -->
     <title>Saral Singh – Backend Developer (PHP & Laravel)</title>
-
-    <!-- SEO Description -->
-    <meta name="description" content="Backend Developer specializing in PHP & Laravel. Based in Kanpur, India. Explore my real projects, clean backend code, APIs, and problem-solving approach.">
-
-    <!-- SEO Keywords (Not too long) -->
+    <meta name="description" content="Backend Developer specializing in PHP & Laravel. Focused on backend architecture, APIs, deployment, and real-world engineering.">
     <meta name="keywords" content="Backend Developer, PHP Developer, Laravel Developer, Kanpur Developer, Saral Singh Portfolio">
-
-    <!-- Author -->
     <meta name="author" content="Saral Singh">
-
-    <!-- OpenGraph (Facebook, LinkedIn, WhatsApp Preview) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://saralsingh.space/">
     <meta property="og:title" content="Saral Singh – Backend Developer (PHP & Laravel)">
     <meta property="og:description" content="Backend Developer from Kanpur specializing in PHP & Laravel. Check my projects, APIs, and clean backend architecture.">
     <meta property="og:image" content="https://saralsingh.space/assets/images/preview.png">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Saral Singh – Backend Developer (PHP & Laravel)">
-    <meta name="twitter:description" content="Backend Developer from Kanpur specializing in PHP & Laravel. Check my projects and backend engineering work.">
+    <meta name="twitter:description" content="Backend Developer from Kanpur specializing in PHP & Laravel.">
     <meta name="twitter:image" content="https://saralsingh.space/assets/images/preview.png">
-
-    <!-- Schema.org JSON-LD (Google Knowledge Graph) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,452 +32,308 @@
       },
       "sameAs": [
         "https://www.linkedin.com/in/saral-singh-8a850a298/",
-        "https://github.com/SaralSingh"
+        "https://github.com/SaralSingh",
         "https://blog.saralsingh.space"
       ]
     }
     </script>
-
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico">
     <link rel="me" href="https://github.com/SaralSingh">
     <link rel="me" href="https://www.linkedin.com/in/saral-singh-8a850a298/">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            color: #212529;
-            line-height: 1.6;
-            padding-top: 70px; /* for fixed navbar */
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #ffffff, #eef2f7);
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        section {
-            padding: 70px 0;
-        }
-
-        .section-title {
-            font-weight: 600;
-            margin-bottom: 40px;
-        }
-
-        .skill-badge {
-            background-color: #e9ecef;
-            padding: 10px 16px;
-            border-radius: 20px;
-            margin: 6px;
-            font-size: 14px;
-            display: inline-block;
-        }
-
-        .project-card {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-
-        #contact a {
-    text-decoration: none;
-}
-
-#contact a:hover {
-    color: #0d6efd;
-}
-
-
-        footer {
-            font-size: 14px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Saral Singh</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNav">
-<ul class="navbar-nav ms-auto align-items-center">
-    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
-    <!-- SEO important link -->
-    <li class="nav-item">
-        <a class="nav-link fw-semibold text-primary" 
-           href="https://blog.saralsingh.space" 
-           target="_blank">
-           Blog
-        </a>
-    </li>
-</ul>
-            </div>
-        </div>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="#" class="nav-brand">Saral Singh</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://blog.saralsingh.space" target="_blank">Blog</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="container text-center">
-        <img src="assets/images/subject.png"
-             class="img-fluid profile-img mb-3"
-             alt="Saral Singh Web Developer">
-
-<h1 class="fw-bold">Saral Singh</h1>
-<p class="text-muted fs-5">
-    Backend Developer (PHP / Laravel)
-</p>
-
-<p class="mt-3 col-md-8 mx-auto">
-    I build backend applications using PHP and Laravel with a focus on clean architecture,
-    database design, authentication systems, RESTful APIs, and deployment workflows.
-    My approach is project-driven, emphasizing real-world problem solving over tutorials.
-</p>
-        <div class="mt-4">
-            <a href="#projects" class="btn btn-dark me-2">View Projects</a>
-            <a href="mailto:saralsingh2005@gmail.com" class="btn btn-outline-dark">
-                Contact
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="bg-white">
+<section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
     <div class="container">
-        <h2 class="section-title text-center">About Me</h2>
-
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-<p>
-    I am a Bachelor of Computer Applications (BCA) student focused on backend development with PHP and Laravel.
-</p>
-<p>
-    I work on building real-world projects while strengthening core backend concepts such as database design, authentication flows, API architecture, and deployment.
-</p>
-
+        <div class="hero-layout">
+            <div class="hero-content">
+                <span class="label">Backend Developer</span>
+                <h1 class="heading-xl">Build systems.<br>Not just websites.</h1>
+                <p class="body-lg hero-subheading">Focused on backend architecture, APIs, deployment, and real-world engineering.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary-cta">View Projects <span class="arrow">→</span></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/subject.png" alt="Saral Singh – Backend Developer" />
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-    <div class="container text-center">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="d-flex flex-wrap justify-content-center">
-            <span class="skill-badge">PHP</span>
-            <span class="skill-badge">Laravel</span>
-            <span class="skill-badge">MySQL</span>
-            <span class="skill-badge">REST APIs (Basics)</span>
-            <span class="skill-badge">HTML</span>
-            <span class="skill-badge">CSS (Basics)</span>
-            <span class="skill-badge">JavaScript (Basics)</span>
-            <span class="skill-badge">Bootstrap</span>
-            <span class="skill-badge">Git & GitHub</span>
-            <span class="skill-badge">C / C++</span>
-            <span class="skill-badge">Python (Basics)</span>
-        </div>
-    </div>
-</section>
+<div class="container"><div class="section-divider"></div></div>
 
 <!-- PROJECTS -->
-<section id="projects" class="bg-white">
+<section class="section" id="projects">
     <div class="container">
-        <h2 class="section-title text-center">Projects</h2>
-
-        <div class="row">
-
-            <div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">QuickMark (Presence / Attendance System)</h5>
-            <p class="card-text">
-                An API-first presence marking system designed for simplicity and reliability.
-                Built with Laravel, it allows list owners to create sessions and mark presence
-                without feature creep or unnecessary complexity.
-            </p>
-            <ul>
-                <li>API-First Backend Architecture</li>
-                <li>List → People → Session → Presence Data Model</li>
-                <li>Owner-Only Presence Marking Logic</li>
-                <li>Clean & Rule-Driven System Design</li>
-            </ul>
-
-            <a href="https://qmark.alwaysdata.net/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-            <a href="https://github.com/SaralSingh/quickmark.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
+        <div class="section-header reveal">
+            <span class="label">Selected Work</span>
+            <h2 class="heading-lg">Projects</h2>
         </div>
-    </div>
-</div>
+        <div class="projects-grid">
 
-
-            <!-- Project: Shrtx – API-First URL Shortener -->
-<div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">Shrtx – API-First URL Shortener</h5>
-
-            <p class="card-text">
-                An API-first URL shortening service built with Laravel, focused on
-                clean backend architecture, performance, and controlled access.
-                Designed to handle high-frequency redirect traffic efficiently.
-            </p>
-
-            <ul>
-                <li>Deterministic Base62 short code generation (ID-based)</li>
-                <li>Fast public redirects with indexed lookups</li>
-                <li>Rate-limited API (anonymous & token-ready)</li>
-                <li>Service-layer architecture (clean controllers)</li>
-                <li>Click tracking & optional link expiration</li>
-            </ul>
-
-            <a href="https://blog.saralsingh.space/shrtx-frontend/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-            <a href="https://github.com/SaralSingh/shrtx.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-        </div>
-    </div>
-</div>
-
-
-<!-- Project: SaralPHP Framework -->
-<div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">SaralPHP Framework</h5>
-
-            <p class="card-text">
-                A lightweight PHP micro-framework built from scratch to speed up basic CRUD-based backend development, with routing, helpers and essential security features.
-            </p>
-
-            <ul>
-                <li>Dynamic Regex Router & Middleware Chaining</li>
-                <li>Custom Built-in C.R.U.D Database ORM</li>
-                <li>Environment Config (.env) & Global Error Handling</li>
-                <li>Security hardened (SQLi, CSRF, Mass Assignment)</li>
-            </ul>
-             <!-- <a href="https://minimvc.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a> -->
-             <a href="https://github.com/SaralSingh/SaralPHP.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-     
-        </div>
-    </div>
-</div>
-
-
-<div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">Shabd (Minimalist Writing Platform)</h5>
-            <p class="card-text">
-                A distraction-free writing platform featuring a custom "Ink & Paper" aesthetic. 
-                Built with Laravel, it focuses on simplicity, readability and community connection.
-            </p>
-            <ul>
-                <li>Custom "Ink & Paper" UI Design</li>
-                <li>Recursive/Nested Comment System</li>
-                <li>User Profiles with Follow/Unfollow Logic</li>
-                <li>Notifications & Dashboard</li>
-            </ul>
-
-            <a href="http://appsaral.alwaysdata.net/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-            <a href="https://github.com/SaralSingh/shabd.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-        </div>
-    </div>
-</div>
-
-            <!-- Project 2 -->
-            <div class="col-md-6 mb-4">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Attendance Hub</h5>
-                        <p class="card-text">
-                            A web application created for BCA students to track attendance
-                            and access academic resources.
-                        </p>
-                        <ul>
-                            <li>Attendance tracking system</li>
-                            <li>Assignment and paper solution sections</li>
-                            <li>Simple and student-friendly UI</li>
-                        </ul>
-
-                        <a href="https://attendhub.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-                        <!-- <a href="#" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a> -->
+            <!-- Project 1: QuickMark -->
+            <div class="project-card reveal">
+                <div class="project-info">
+                    <span class="project-number">01</span>
+                    <h3 class="heading-md">QuickMark</h3>
+                    <p class="body-md project-desc">An API-first presence marking system. List owners create sessions and mark presence — no feature creep, just reliability.</p>
+                    <div class="project-stack">
+                        <span class="stack-tag">Laravel</span>
+                        <span class="stack-tag">REST API</span>
+                        <span class="stack-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://qmark.alwaysdata.net/" target="_blank" class="project-link">Live ↗</a>
+                        <a href="https://github.com/SaralSingh/quickmark.git" target="_blank" class="project-link">GitHub ↗</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="col-md-6 mb-4">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Talksy (Group Chat Website)</h5>
-                        <p class="card-text">
-                            A group chat website developed to understand authentication
-                            and basic real-time communication concepts.
-                        </p>
-                        <ul>
-                            <li>User authentication and admin controls</li>
-                            <li>Group chat functionality</li>
-                            <li>GIF search and user status</li>
-                        </ul>
-
-                        <a href="https://talksy.wuaze.com" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
-                        <!-- <a href="#" class="btn btn-sm btn-outline-primary">GitHub</a> -->
+            <!-- Project 2: Shrtx -->
+            <div class="project-card reveal">
+                <div class="project-info">
+                    <span class="project-number">02</span>
+                    <h3 class="heading-md">Shrtx</h3>
+                    <p class="body-md project-desc">API-first URL shortener with deterministic Base62 codes, fast redirects, rate limiting, and click tracking.</p>
+                    <div class="project-stack">
+                        <span class="stack-tag">Laravel</span>
+                        <span class="stack-tag">Base62</span>
+                        <span class="stack-tag">Rate Limiting</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://blog.saralsingh.space/shrtx-frontend/" target="_blank" class="project-link">Live ↗</a>
+                        <a href="https://github.com/SaralSingh/shrtx.git" target="_blank" class="project-link">GitHub ↗</a>
                     </div>
                 </div>
             </div>
-            <!-- Project : SkyHunt -->
-<div class="col-md-6 mb-4">
-    <div class="card project-card h-100">
-        <div class="card-body">
-            <h5 class="card-title">SkyHunt (Python Arcade Game)</h5>
 
-            <p class="card-text">
-                SkyHunt is a simple arcade-style game built using Python.
-                I created this project to practice game logic, event handling,
-                and basic performance optimization.
-            </p>
+            <!-- Project 3: SaralPHP -->
+            <div class="project-card reveal">
+                <div class="project-info">
+                    <span class="project-number">03</span>
+                    <h3 class="heading-md">SaralPHP Framework</h3>
+                    <p class="body-md project-desc">A lightweight PHP micro-framework built from scratch — regex routing, middleware chaining, custom ORM, and hardened security.</p>
+                    <div class="project-stack">
+                        <span class="stack-tag">PHP</span>
+                        <span class="stack-tag">ORM</span>
+                        <span class="stack-tag">Security</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SaralSingh/SaralPHP.git" target="_blank" class="project-link">GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
 
-            <ul>
-                <li>Keyboard-based character movement and shooting</li>
-                <li>Monster spawning and score system</li>
-                <li>Lifeline system with game-over condition</li>
-                <li>Power-ups that temporarily boost speed and damage</li>
-                <li>Converted the game into a Windows <code>.exe</code> file</li>
-                <li>Digitally signed the executable using <code>signtool.exe</code></li>
-            </ul>
-            <a href="https://github.com/SaralSingh/SkyHunt-Game.git" target="_blank" class="btn btn-sm btn-outline-primary">GitHub</a>
-           
-        </div>
-    </div>
-</div>
+            <!-- Project 4: Shabd -->
+            <div class="project-card reveal">
+                <div class="project-info">
+                    <span class="project-number">04</span>
+                    <h3 class="heading-md">Shabd</h3>
+                    <p class="body-md project-desc">A distraction-free writing platform with custom "Ink & Paper" aesthetic, nested comments, follows, and notifications.</p>
+                    <div class="project-stack">
+                        <span class="stack-tag">Laravel</span>
+                        <span class="stack-tag">Blade</span>
+                        <span class="stack-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="http://appsaral.alwaysdata.net/" target="_blank" class="project-link">Live ↗</a>
+                        <a href="https://github.com/SaralSingh/shabd.git" target="_blank" class="project-link">GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Attendance Hub -->
+            <div class="project-card reveal">
+                <div class="project-info">
+                    <span class="project-number">05</span>
+                    <h3 class="heading-md">Attendance Hub</h3>
+                    <p class="body-md project-desc">Attendance tracking and academic resource platform built for BCA students — simple, student-friendly, and functional.</p>
+                    <div class="project-stack">
+                        <span class="stack-tag">PHP</span>
+                        <span class="stack-tag">MySQL</span>
+                        <span class="stack-tag">Bootstrap</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://attendhub.wuaze.com" target="_blank" class="project-link">Live ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Talksy -->
+            <div class="project-card reveal">
+                <div class="project-info">
+                    <span class="project-number">06</span>
+                    <h3 class="heading-md">Talksy</h3>
+                    <p class="body-md project-desc">A group chat platform built to understand authentication, real-time messaging, admin controls, and GIF integration.</p>
+                    <div class="project-stack">
+                        <span class="stack-tag">PHP</span>
+                        <span class="stack-tag">JavaScript</span>
+                        <span class="stack-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://talksy.wuaze.com" target="_blank" class="project-link">Live ↗</a>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
 </section>
+
+<div class="container"><div class="section-divider"></div></div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="label">Background</span>
+            <h2 class="heading-lg">About</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p class="body-lg">Backend Developer focused on building practical web applications using PHP and Laravel. Experienced in developing real-world projects while strengthening backend fundamentals — API architecture, database design, authentication workflows, and deployment.</p>
+                <p class="body-md">Interested in building reliable, scalable, and maintainable systems. My approach is project-driven: every concept I learn gets tested in a real codebase, not just a tutorial. I value clean architecture, thoughtful abstractions, and shipping things that actually work.</p>
+            </div>
+            <div class="about-details reveal" data-stagger>
+                <div class="detail-block reveal">
+                    <div class="detail-label">Location</div>
+                    <div class="detail-value">Kanpur, India</div>
+                </div>
+                <div class="detail-block reveal">
+                    <div class="detail-label">Focus</div>
+                    <div class="detail-value">Backend Engineering</div>
+                </div>
+                <div class="detail-block reveal">
+                    <div class="detail-label">Stack</div>
+                    <div class="detail-value">PHP · Laravel · MySQL</div>
+                </div>
+                <div class="detail-block reveal">
+                    <div class="detail-label">Approach</div>
+                    <div class="detail-value">Build to Learn</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container"><div class="section-divider"></div></div>
+
+<!-- TOOLBOX -->
+<section class="section" id="toolbox">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="label">Toolbox</span>
+            <h2 class="heading-lg">Technologies</h2>
+        </div>
+        <div class="toolbox-grid" data-stagger>
+            <div class="tool-card reveal"><span class="tool-icon">⟨/⟩</span><div class="tool-name">PHP</div><div class="tool-category">Language</div></div>
+            <div class="tool-card reveal"><span class="tool-icon">◈</span><div class="tool-name">Laravel</div><div class="tool-category">Framework</div></div>
+            <div class="tool-card reveal"><span class="tool-icon">⊞</span><div class="tool-name">MySQL</div><div class="tool-category">Database</div></div>
+            <div class="tool-card reveal"><span class="tool-icon">⇢</span><div class="tool-name">REST APIs</div><div class="tool-category">Architecture</div></div>
+            <div class="tool-card reveal"><span class="tool-icon">⏣</span><div class="tool-name">Git</div><div class="tool-category">Version Control</div></div>
+            <div class="tool-card reveal"><span class="tool-icon">⬡</span><div class="tool-name">JavaScript</div><div class="tool-category">Language</div></div>
+            <div class="tool-card reveal"><span class="tool-icon">◎</span><div class="tool-name">Bootstrap</div><div class="tool-category">CSS Framework</div></div>
+            <div class="tool-card reveal"><span class="tool-icon">⟐</span><div class="tool-name">Python</div><div class="tool-category">Language</div></div>
+        </div>
+    </div>
+</section>
+
+<div class="container"><div class="section-divider"></div></div>
 
 <!-- EDUCATION -->
-<section id="education">
+<section class="section" id="education">
     <div class="container">
-        <h2 class="section-title text-center">Education</h2>
-
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <ul>
-                    <li>
-                        <strong>Bachelor of Computer Applications (BCA)</strong><br>
-                        Allenhouse Business School (2023 – 2026)
-                    </li>
-                    <li class="mt-3">
-                        <strong>Intermediate</strong><br>
-                        Patel Saraswati Vidyalaya Inter College, Kanpur (2021 – 2022)
-                    </li>
-                </ul>
+        <div class="section-header reveal">
+            <span class="label">Education</span>
+            <h2 class="heading-lg">Academic</h2>
+        </div>
+        <div class="education-list">
+            <div class="edu-item reveal">
+                <div>
+                    <div class="edu-degree">Bachelor of Computer Applications</div>
+                    <div class="edu-school">Allenhouse Business School</div>
+                </div>
+                <span class="edu-year">2023 – 2026</span>
+            </div>
+            <div class="edu-item reveal">
+                <div>
+                    <div class="edu-degree">Intermediate</div>
+                    <div class="edu-school">Patel Saraswati Vidyalaya Inter College, Kanpur</div>
+                </div>
+                <span class="edu-year">2021 – 2022</span>
             </div>
         </div>
     </div>
 </section>
+
+<div class="container"><div class="section-divider"></div></div>
 
 <!-- CONTACT -->
-<section id="contact" class="bg-white">
+<section class="section" id="contact">
     <div class="container">
-        <h2 class="section-title text-center">Contact</h2>
-
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body text-center">
-
-                        <p class="mb-3">
-                            <i class="fa-solid fa-envelope me-2"></i>
-                            <a href="mailto:saralsingh2005@gmail.com">
-                                saralsingh2005@gmail.com
-                            </a>
-                        </p>
-
-                        <div class="d-flex justify-content-center gap-4 fs-5">
-<a href="https://github.com/SaralSingh" class="text-dark" target="_blank">
-   <i class="fa-brands fa-github"></i> 
-</a>
-
-
-                            <a href="https://www.linkedin.com/in/saral-singh-8a850a298/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-dark">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            
-                            <a href="https://www.instagram.com/saral._.singh/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="text-dark">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                           
-                        </div>
-
-                    </div>
-                </div>
+        <div class="contact-content">
+            <div class="section-header reveal">
+                <span class="label">Get in Touch</span>
+                <h2 class="heading-lg">Let's connect.</h2>
+            </div>
+            <p class="body-lg reveal">Have a project idea, collaboration, or just want to say hello? I'd love to hear from you.</p>
+            <a href="mailto:saralsingh2005@gmail.com" class="contact-email reveal">
+                saralsingh2005@gmail.com <span class="arrow-link">↗</span>
+            </a>
+            <div class="social-links reveal">
+                <a href="https://github.com/SaralSingh" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/saral-singh-8a850a298/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/saral._.singh/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg>
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-
-
-<footer class="py-4 bg-dark text-white text-center">
-    <p class="mb-1">© 2026 Saral Singh</p>
-
-    <p class="mb-2">
-        <a href="https://github.com/SaralSingh"
-           class="text-white text-decoration-none mx-2"
-           target="_blank">
-           GitHub
-        </a>
-        |
-        <a href="https://www.linkedin.com/in/saral-singh-8a850a298/"
-           class="text-white text-decoration-none mx-2"
-           target="_blank">
-           LinkedIn
-        </a>
-    </p>
-
-    <p class="mb-0">
-        Learning backend development • Building projects step by step
-    </p>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-left">© 2026 Saral Singh</div>
+            <div class="footer-right">
+                <a href="https://github.com/SaralSingh" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/saral-singh-8a850a298/" target="_blank">LinkedIn</a>
+                <a href="https://blog.saralsingh.space" target="_blank">Blog</a>
+            </div>
+        </div>
+    </div>
 </footer>
 
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
