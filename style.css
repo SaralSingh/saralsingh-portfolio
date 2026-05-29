@@ -538,45 +538,76 @@ img {
     border-color: var(--text-primary);
 }
 
-/* --- SKILLS / TOOLBOX SECTION --- */
-.toolbox-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-}
-
-.tool-card {
-    padding: 32px 28px;
-    background: var(--bg-elevated);
-    border-radius: var(--radius-md);
+/* --- SKILLS SECTION --- */
+.skills-table {
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--border);
-    transition: all 0.3s var(--ease-out);
-    text-align: center;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg-elevated);
 }
 
-.tool-card:hover {
-    border-color: var(--border-strong);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+.skill-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    gap: 0;
+    padding: 24px 36px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s ease;
 }
 
-.tool-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-    display: block;
+.skill-row:last-child {
+    border-bottom: none;
 }
 
-.tool-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+.skill-row:hover {
+    background: var(--bg);
 }
 
-.tool-category {
+.skill-category-label {
     font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-pill {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 100px;
+    background: var(--bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
     letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+    border-color: var(--border-strong);
+    color: var(--text-primary);
+}
+
+.skill-pill--accent {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.skill-pill--accent:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #fff;
 }
 
 /* --- EDUCATION SECTION --- */
@@ -797,8 +828,10 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .toolbox-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px 28px;
     }
 }
 
@@ -881,10 +914,13 @@ body.nav-open {
         padding: 32px;
     }
 
-    .toolbox-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .skill-row {
+        padding: 16px 20px;
     }
 
+    .skill-category-label {
+        font-size: 11px;
+    }
     .edu-item {
         flex-direction: column;
         gap: 12px;
@@ -899,12 +935,8 @@ body.nav-open {
 }
 
 @media (max-width: 480px) {
-    .toolbox-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .tool-card {
-        padding: 24px 16px;
+    .skill-pill {
+        font-size: 12px;
+        padding: 5px 12px;
     }
 }
